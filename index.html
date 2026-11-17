@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#40183f" />
+    <meta name="description" content="Un calendario de adviento hecho con amor." />
+    <title>Calendario de adviento para mi novia preciosa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400..800&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="refresh.css" />
+  </head>
+  <body>
+    <main>
+      <section class="cover" id="cover" aria-labelledby="cover-title"><div class="cover-copy"><h1 id="cover-title">Calendario de adviento<br /><em>para mi novia preciosa</em></h1><p class="cover-note">24 sorpresitas</p><div class="cover-actions"><button class="primary-button" id="open-calendar">Abrir mi calendario <span>→</span></button><button class="special-envelope" id="open-special" type="button" aria-label="Abrir sorpresa del 19 de noviembre"><img src="assets/art/envelope-wine.png" alt="" /><span class="special-envelope-date">19<br>NOV</span><span class="special-envelope-note">prólogo</span><small id="special-status"></small></button></div></div></section>
+      <section class="calendar-section" id="calendar" aria-labelledby="calendar-title" hidden><header class="calendar-header"><div><p class="eyebrow">diciembre 2026</p><h2 id="calendar-title">Abre un sobre cada día, <em>estrellita</em></h2></div></header><div class="calendar-grid" id="calendar-grid" aria-live="polite"></div></section>
+    </main>
+    <dialog class="letter-dialog" id="letter-dialog" aria-labelledby="letter-title"><button class="close-dialog" id="close-letter" aria-label="Cerrar carta">×</button><article class="letter" id="letter-content"><div class="letter-decoration" id="letter-decoration"></div><p class="letter-day" id="letter-day"></p><h2 id="letter-title"></h2><div class="letter-image-wrap"><img id="letter-image" alt="" /><div class="image-fallback" id="image-fallback"></div></div><p class="letter-message" id="letter-message"></p><button class="intro-calendar-button" id="intro-calendar-button" type="button" hidden>Ver los 24 sobres que te esperan →</button><aside class="day-coupon" id="day-coupon" hidden><p class="eyebrow">un cupón solo para ti</p><p class="coupon-number" id="day-coupon-number"></p><h3 id="day-coupon-title"></h3><p id="day-coupon-description"></p><button class="little-button" id="claim-day-coupon" type="button">Quiero reclamarlo</button><p class="coupon-result" id="day-coupon-result" aria-live="polite"></p></aside><section class="day-travel" id="day-travel" hidden><p class="eyebrow" id="day-travel-place"></p><h3 id="day-travel-title"></h3><p id="day-travel-intro"></p><div class="memory-stack" id="day-memory-stack"></div></section><aside class="song-card" id="song-card" hidden><span class="song-vinyl">♫</span><p class="song-label">la canción de hoy</p><h3 id="song-title"></h3><p class="song-artist" id="song-artist"></p><p class="song-reason" id="song-reason"></p><a class="song-link" id="song-link" target="_blank" rel="noopener">Escuchar esta canción →</a><audio class="song-audio" id="song-audio" controls hidden></audio></aside><div class="letter-media" id="letter-media" hidden><p class="media-label">un pedacito que puedes escuchar o mirar</p><audio id="letter-audio" controls hidden></audio><video id="letter-video" controls playsinline hidden></video></div><p class="letter-signature">Con amor,<br /><span>tu novio ♡</span></p></article></dialog>
+    <dialog class="quiz-dialog" id="quiz-dialog" aria-labelledby="quiz-dialog-title"><button class="close-dialog" id="close-quiz" aria-label="Cerrar quiz">×</button><section class="quiz-sheet"><p class="eyebrow">una clave para abrir este sobre</p><h2 id="quiz-dialog-title">Una pregunta para ti</h2><p class="quiz-lead" id="quiz-lead"></p><form id="quiz-form" novalidate><div class="quiz-questions" id="quiz-questions"></div><button class="primary-button" id="submit-quiz" type="submit">Desbloquear mi carta <span>→</span></button></form><p class="quiz-result" id="quiz-result" aria-live="polite"></p></section></dialog>
+    <template id="envelope-template"><button class="envelope" type="button"><img class="envelope-art" alt="" /><span class="envelope-number"></span><span class="envelope-sticker"></span><span class="song-stamp"></span><span class="envelope-topic"></span><span class="envelope-status"></span></button></template>
+    <script src="mensajes.js"></script><script src="recuerdos.js"></script><script src="quiz.js"></script><script src="canciones.js"></script><script src="app.js"></script>
+  </body>
+</html>

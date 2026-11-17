@@ -1,0 +1,54 @@
+/* Dirección visual v4: álbum nocturno, editorial y romántico. Las imágenes se conservan intactas. */
+:root{--night:#0d080c;--plum:#1c0d15;--panel:#27101b;--panel-raised:#351321;--line:#6d2b41;--cherry:#f34d70;--rose:#ffb2bf;--cream:#f7ede8;--muted:#caaeb4;--gold:#e9c46a}
+*{box-sizing:border-box}
+html{background:var(--night)}
+body{min-width:320px;background:var(--night);color:var(--cream);font-family:'DM Sans',sans-serif;letter-spacing:-.012em}
+body,button,select,input{font-family:'DM Sans',sans-serif}
+button{font:inherit}
+[hidden]{display:none!important}
+
+.cover{min-height:100svh;display:grid;place-items:center;padding:clamp(2rem,7vw,6rem) 1.25rem;background:radial-gradient(ellipse 70% 50% at 50% 5%,#4c1830 0,transparent 72%),var(--night)}
+.cover-copy{max-width:790px;padding:0;text-align:center;background:transparent;box-shadow:none;clip-path:none;transform:none}
+.cover-copy .eyebrow,.eyebrow{margin:0;color:var(--rose);font:500 .68rem/1.4 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase}
+.cover h1{max-width:860px;margin:.8rem auto 1.1rem;color:var(--cream);font:700 clamp(3.35rem,9vw,7.7rem)/.84 'Bricolage Grotesque',sans-serif;letter-spacing:-.09em}
+.cover h1 em{color:var(--cherry);font:inherit;font-style:normal;letter-spacing:-.1em}
+.cover-note{max-width:420px;margin:0 auto;color:var(--muted);font:500 1.05rem/1.45 'DM Sans',sans-serif}
+.cover-actions{justify-content:center;gap:.75rem;margin-top:2rem}
+.primary-button,.little-button{border:1px solid var(--cherry);border-radius:0;background:var(--cherry);color:#210b13;box-shadow:none;transform:none;font:600 .72rem/1.1 'DM Mono',monospace;letter-spacing:.05em;text-transform:uppercase;transition:background .18s,border-color .18s,color .18s,transform .18s}
+.primary-button{padding:.95rem 1.05rem}.primary-button:hover,.little-button:hover{background:var(--gold);border-color:var(--gold);color:#201117;transform:translateY(-2px)}
+.special-envelope{width:144px;height:130px}.special-envelope-date{color:var(--cream);font-family:'Bricolage Grotesque',sans-serif}.special-envelope-note{font-family:'DM Sans',sans-serif;color:var(--rose)}
+
+.calendar-section{min-height:100svh;padding:clamp(3.5rem,7vw,6rem) clamp(1rem,6vw,7rem);background:var(--plum);color:var(--cream)}
+.calendar-section:before{display:none}.calendar-header{max-width:1240px;padding-bottom:1.35rem;border-bottom:1px solid var(--line)}
+.calendar-header h2{max-width:720px;margin:.65rem 0 0;color:var(--cream);font:700 clamp(2.3rem,5vw,5rem)/.88 'Bricolage Grotesque',sans-serif;letter-spacing:-.075em}
+.calendar-header h2 em{color:var(--rose);font:inherit;font-style:normal}.header-actions{gap:.55rem}.little-button{padding:.65rem .75rem;background:transparent;color:var(--rose);border-color:var(--line)}
+.icon-button{background:var(--panel-raised)}
+.calendar-instruction{max-width:580px;margin:1.2rem 0 2.4rem;padding:0;background:transparent;color:var(--muted);font:400 .96rem/1.55 'DM Sans',sans-serif;transform:none;clip-path:none}
+.calendar-grid{gap:clamp(.35rem,1vw,.9rem);max-width:1240px}.envelope{height:205px;color:var(--cream)}
+.envelope-number{color:var(--cream);font-family:'Bricolage Grotesque',sans-serif!important;font-size:clamp(2.3rem,3.4vw,3.5rem);font-weight:700;letter-spacing:-.1em;text-shadow:0 2px 8px #13050b}
+.envelope-topic,.envelope-status{color:#ffdbe0;font-family:'DM Mono',monospace!important;text-shadow:0 1px 4px #13050b}.envelope-topic{font-size:.52rem}.envelope-status{font-size:.66rem}.envelope-sticker{color:var(--gold)}
+.envelope:hover:not(.locked){transform:translateY(-5px) rotate(0);filter:brightness(1.12)}.envelope.locked{opacity:.42;filter:grayscale(.8) brightness(.6)}.song-stamp{background:var(--gold);color:#28101b}
+
+dialog{background:transparent}.letter-dialog{width:min(94vw,760px);max-width:760px;border:0}.close-dialog{position:fixed;top:24px;right:max(24px,calc(50% - 360px));z-index:9;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:var(--night);color:var(--cream);font:300 2rem/1 'DM Sans',sans-serif;box-shadow:none}.close-dialog:hover{border-color:var(--rose);color:var(--rose)}
+.letter{min-height:0!important;padding:clamp(2rem,6vw,4rem);background:var(--plum)!important;color:var(--cream);border:1px solid var(--line);border-top:5px solid var(--cherry);box-shadow:0 22px 65px #0008;clip-path:none}
+.letter:before{display:none}.letter.final-letter{background:var(--plum)!important}.letter-decoration{margin:0 0 .6rem;padding:0;color:var(--rose);font:500 .67rem/1.4 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;background:transparent!important;box-shadow:none!important;min-height:0!important;height:auto!important}
+.letter-day{margin:0 0 1rem;color:var(--gold);font:500 .67rem/1.35 'DM Mono',monospace;letter-spacing:.14em}.letter h2{max-width:620px;margin:0 0 1.2rem;color:var(--cream);font:700 clamp(2.3rem,6vw,4.5rem)/.88 'Bricolage Grotesque',sans-serif!important;letter-spacing:-.08em}
+.letter-image-wrap{width:fit-content;max-width:100%;min-height:0;margin:1.4rem auto;padding:0;border:1px solid var(--line);outline:0;background:#130a0f!important;box-shadow:0 12px 30px #0007;transform:none}.letter-image-wrap img{display:block;width:auto;max-width:100%;height:auto;max-height:66svh;object-fit:contain}.letter-message{max-width:590px;margin:1.4rem auto;color:#f1dde0;font:400 1.05rem/1.65 'DM Sans',sans-serif;white-space:pre-line}.letter-signature{margin:2rem 0 0 auto;color:var(--rose);font:500 1rem/1.25 'DM Sans',sans-serif;transform:none}.letter-signature span{font:700 1.1rem/1.2 'Bricolage Grotesque',sans-serif}
+
+.letter.coupon-letter{min-height:0!important;background:var(--plum)!important}.letter.coupon-letter .letter-decoration{display:block!important;margin:0 0 .9rem!important;color:var(--rose)!important}.letter.coupon-letter #letter-title,.letter.coupon-letter #letter-message{display:none!important}
+.day-coupon,.day-travel{max-width:590px;margin:1.4rem auto;padding:1.25rem;border:1px solid var(--line);border-top:3px solid var(--cherry);background:var(--panel)!important;color:var(--cream)}
+.day-coupon .eyebrow,.day-travel .eyebrow{color:var(--rose)}.coupon-number{margin:.75rem 0 0;color:var(--gold);font:500 .65rem 'DM Mono',monospace;letter-spacing:.14em}.day-coupon h3,.day-travel h3{margin:.55rem 0 .7rem;color:var(--cream);font:700 clamp(1.65rem,4vw,2.5rem)/.95 'Bricolage Grotesque',sans-serif!important;letter-spacing:-.05em}.day-coupon>p:not(.eyebrow):not(.coupon-number):not(.coupon-result),.day-travel>p:not(.eyebrow){margin:.55rem 0;color:#ebd6da;font:400 1rem/1.55 'DM Sans',sans-serif!important}.day-coupon .little-button{margin-top:1rem}.coupon-result{color:var(--rose)!important;font:500 .95rem/1.4 'DM Sans',sans-serif!important}
+
+.song-card{max-width:590px;margin:1.4rem auto;padding:1.3rem;background:var(--panel)!important;color:var(--cream);border:1px solid var(--line);border-top:3px solid var(--gold);box-shadow:none;clip-path:none;transform:none}.song-vinyl{position:static;display:inline-grid;width:34px;height:34px;margin:0 0 .65rem;border:1px solid var(--gold);background:transparent;color:var(--gold);transform:none}.song-label{color:var(--rose);font:500 .64rem 'DM Mono',monospace;letter-spacing:.14em}.song-card h3{margin:.45rem 0;color:var(--cream);font:700 clamp(1.8rem,5vw,3rem)/.9 'Bricolage Grotesque',sans-serif!important;letter-spacing:-.06em}.song-artist{color:var(--gold);font:500 .78rem 'DM Mono',monospace}.song-reason{color:#f0dce0;font:400 1rem/1.6 'DM Sans',sans-serif!important}.song-video{border:1px solid var(--line)!important;border-radius:0!important}.song-link,.song-audio{display:none!important}
+
+.letter-media{max-width:590px;background:var(--panel)!important;border:1px solid var(--line);clip-path:none;transform:none}.media-label{color:var(--rose);font:500 .7rem 'DM Mono',monospace}.letter-media audio,.letter-media video{border-radius:0}
+.quiz-sheet,.image-picker-content{background:var(--plum)!important;color:var(--cream);border:1px solid var(--line);border-top:5px solid var(--cherry);box-shadow:0 22px 65px #0008;clip-path:none}.quiz-sheet h2,.image-picker-content h2{color:var(--cream);font-family:'Bricolage Grotesque',sans-serif!important}.quiz-lead,.quiz-result{font-family:'DM Sans',sans-serif!important}.quiz-question{background:var(--panel)!important;color:var(--cream)!important;border:1px solid var(--line);box-shadow:none}.quiz-question:nth-child(even){background:var(--panel-raised)!important}.quiz-option{border-color:var(--line);background:#170b12;color:var(--cream);font-family:'DM Sans',sans-serif!important}.quiz-option:hover{background:#421626}.quiz-option:has(input:checked){background:#76203b;box-shadow:none}.file-label{background:var(--panel-raised);border-color:var(--line);color:var(--cream)}.image-picker-content select{background:var(--panel);border-color:var(--line);color:var(--cream)}
+
+.memory-note{background:var(--panel)!important;color:var(--cream);border:1px solid var(--line);box-shadow:none}.memory-note:nth-child(even){background:var(--panel-raised)!important}.memory-note h3{font-family:'Bricolage Grotesque',sans-serif!important}.memory-note p{font-family:'DM Sans',sans-serif!important}.memory-number{color:var(--gold)}.memory-photo-placeholder{background:#180b12;color:var(--muted)}
+@media(max-width:760px){.cover h1{font-size:clamp(3.1rem,16vw,5.1rem)}.calendar-section{padding:3rem 1rem}.calendar-header{display:block}.header-actions{justify-content:flex-start;margin-top:1.2rem}.letter{padding:2rem 1.25rem}.close-dialog{right:16px;top:16px}.letter-image-wrap img{max-height:54svh}.calendar-grid{gap:.1rem}.envelope{height:185px}}
+.photo-sticker-row{grid-column:1/-1;display:flex;justify-content:space-evenly;align-items:center;gap:2rem;padding:.8rem 1rem;pointer-events:none}
+.photo-sticker-row img{display:block;width:auto;height:auto;max-width:38%;max-height:200px;object-fit:contain;transform:rotate(-6deg);filter:drop-shadow(0 5px 5px #0008)}
+.photo-sticker-row img:nth-child(2){transform:rotate(6deg)}
+.song-reason{white-space:pre-line}
+.memory-note p{white-space:pre-line}
+@media(max-width:760px){.photo-sticker-row{padding:.8rem 0}.photo-sticker-row img{max-width:40%;max-height:145px}}
